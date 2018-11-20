@@ -1,10 +1,10 @@
-package sample;
+package cps510;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -14,8 +14,9 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         Parent root = loader.load();
         Controller controller = loader.getController();
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 800, 475));
+        primaryStage.setTitle("Database Access Application 5000");
+        primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("icon.png")));
+        primaryStage.setScene(new Scene(root, 500, 375));
         primaryStage.setOnHidden(e -> controller.shutdown());
         primaryStage.show();
     }

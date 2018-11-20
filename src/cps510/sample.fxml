@@ -2,7 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
@@ -11,9 +11,8 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps510.Controller">
   <tabs>
     <Tab text="Create">
          <content>
@@ -21,7 +20,7 @@
                <top>
                   <Button mnemonicParsing="false" onAction="#createDefaultButton" text="Create Default Tables" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
-                        <Insets top="15.0" />
+                        <Insets top="10.0" />
                      </BorderPane.margin>
                   </Button>
                </top>
@@ -96,7 +95,7 @@
                      <children>
                         <FlowPane alignment="CENTER" hgap="10.0">
                            <children>
-                              <TextField fx:id="tableName" prefWidth="150.0" promptText="Table Name" />
+                              <ChoiceBox fx:id="tablesList" prefWidth="150.0" />
                               <Button mnemonicParsing="false" onAction="#dropTable" text="Drop Table" />
                            </children>
                         </FlowPane>
@@ -112,27 +111,5 @@
                </center>
             </BorderPane>
          </content></Tab>
-      <Tab text="Tables">
-         <content>
-            <BorderPane prefHeight="200.0" prefWidth="200.0">
-               <center>
-                  <Label fx:id="tablesList" alignment="TOP_CENTER" BorderPane.alignment="TOP_CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font></Label>
-               </center>
-               <top>
-                  <Label text="Tables currently in Database:" textAlignment="CENTER" BorderPane.alignment="CENTER">
-                     <BorderPane.margin>
-                        <Insets top="15.0" />
-                     </BorderPane.margin>
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </top>
-            </BorderPane>
-         </content>
-      </Tab>
   </tabs>
 </TabPane>
