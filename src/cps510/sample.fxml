@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
@@ -81,6 +82,13 @@
                            <VBox.margin>
                               <Insets top="35.0" />
                            </VBox.margin>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" hgap="20.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label text="View Table" />
+                              <ChoiceBox fx:id="tablesListQ" prefWidth="150.0" />
+                              <Button mnemonicParsing="false" onAction="#viewTable" text="View" />
+                           </children>
                         </FlowPane>
                      </children>
                   </VBox>

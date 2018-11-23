@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class Controller {
     private Connection conn1 = null;
     @FXML
-    private ChoiceBox tablesList;
+    private ChoiceBox tablesList, tablesListQ;
     @FXML
     private TextField customSQL;
     @FXML
@@ -59,8 +59,10 @@ public class Controller {
             e.printStackTrace();
         }
         tablesList.getItems().clear();
+        tablesListQ.getItems().clear();
         for (String table: tables){
             tablesList.getItems().add(table);
+            tablesListQ.getItems().add(table);
         }
     }
 
@@ -206,6 +208,10 @@ public class Controller {
 
     public void customQuery() {
         executeSQLQueryGetTable(customSQL.getText());
+    }
+
+    public void viewTable(){
+        executeSQLQueryGetTable("select * from \"" + tablesListQ.getValue() + "\"");
     }
 
     public void dropTable() {
