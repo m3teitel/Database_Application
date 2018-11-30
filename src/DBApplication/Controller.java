@@ -1,4 +1,4 @@
-package cps510;
+package DBApplication;
 
 import com.sun.deploy.model.Resource;
 import javafx.beans.property.SimpleStringProperty;
@@ -36,7 +36,7 @@ public class Controller {
     public void initialize() {
         try {
             Class.forName("oracle.jdbc.OracleDriver");
-            String dbURL1 = "jdbc:oracle:thin:m3teitel/06137561@oracle.scs.ryerson.ca:1521:orcl";
+            String dbURL1 = "jdbc:oracle:thin:user/pass@oracle.scs.ryerson.ca:1521:orcl";
             conn1 = DriverManager.getConnection(dbURL1);
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
